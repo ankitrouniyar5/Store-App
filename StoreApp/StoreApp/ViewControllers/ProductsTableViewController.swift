@@ -44,7 +44,7 @@ internal final class ProductsTableViewController: UITableViewController {
             products = try await client.getProductsByCategory(categoryId: category.id)
             tableView.reloadData()
         }catch {
-            print(error)
+            showAlert(title: "Error", message: "Unable to fetch products")
         }
     }
     
@@ -97,11 +97,9 @@ extension ProductsTableViewController: AddProductViewControllerDelegate {
                 tableView.reloadData()
                 controller.dismiss(animated: true)
             } catch {
-                print(error.localizedDescription)
+                showAlert(title: "Error", message: "Unable to add categories")
             }
         }
         
     }
-    
-    
 }

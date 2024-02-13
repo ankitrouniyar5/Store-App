@@ -30,7 +30,7 @@ internal final class CategoriesTableViewController: UITableViewController {
         do {
             categories = try await client.getAllCategories()
         } catch {
-            print(error)
+            showAlert(title: "Error", message: "Unable to fetch categories")
         }
     }
     

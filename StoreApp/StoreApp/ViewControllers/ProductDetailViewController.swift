@@ -102,7 +102,7 @@ internal final class ProductDetailViewController : UIViewController {
                     let _ = navigationController?.popViewController(animated: true)
                 }
             } catch {
-                print(error)
+                showAlert(title: "Error", message: "Unable to delete product")
             }
         }
         
