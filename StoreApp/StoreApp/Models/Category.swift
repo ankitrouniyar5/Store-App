@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal struct Category: Codable {
+internal struct Category: Codable, Hashable {
     internal let id: Int
     internal let name: String
     internal let image: String

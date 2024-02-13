@@ -32,4 +32,12 @@ extension URL {
     static func allProductsByCategory(_ categoryId: Int) -> URL {
         URL(string: "api/v1/categories/\(categoryId)/products", relativeTo: Self.default)!
     }
+    
+    static var createProduct: URL {
+        URL(string: "api/v1/products/", relativeTo: Self.default)!
+    }
+    
+    static func deleteAProduct(_ productId: Int) -> URL {
+        URL(string: "api/v1/products/\(productId)", relativeTo: Self.default)!
+    }
 }
